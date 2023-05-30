@@ -1,24 +1,11 @@
-class stock:
-    m=90
-    def __init__(self,name):
-        self.name=name
-        print('stockname :', self.name)
-    def openingprice(self,price):
-        self.price=price
-        m=77
-        return price,m
-class quantity(stock):
-    def __init__(self,name,price,quantity3):
-        super().__init__(
-            name
-        )
+terms = 10
 
-        self.quantity3=int(quantity3)
+# Uncomment code below to take input from the user
+# terms = int(input("How many terms? "))
 
-    def totalprice(self):
-
-        print(self.quantity3*self.price)
-        return self.quantity3*self.price
-j=quantity("ama","333",5)
-
-print(j.totalprice())
+# use anonymous function
+result = list(map(lambda x: 2 ** x, range(terms)))
+print(result)
+print("The total terms are:",terms)
+for i in range(terms):
+   print("2 raised to power",i,"is",result[i])
